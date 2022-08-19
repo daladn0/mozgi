@@ -2,7 +2,8 @@
   <div>
     <h1
       ref="heading"
-      class="relative text-[82px] font-bold leading-[110%] uppercase text-primary text-center"
+      class="select-none relative text-[82px] font-bold leading-[110%] uppercase text-primary text-center transform translate-x-0 translate-y-0"
+      :class="{ 'duration-300 ease-linear': !isMoved }"
     >
       {{ title }}
     </h1>
@@ -37,10 +38,19 @@ export default {
   data() {
     return {
       animSpeed: 1,
+      isMoved: false,
     };
   },
   methods: {
     parallax(e) {
+      // prevent flickering
+      if (!this.isMoved) {
+        setTimeout(() => {
+          this.isMoved = true;
+        }, 300);
+        true;
+      }
+
       if (!this.$refs.heading) return;
 
       const x = (window.innerWidth - e.pageX * this.animSpeed) / 100;

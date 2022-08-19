@@ -2,6 +2,8 @@
   <div
     class="w-full h-screen overflow-hidden px-[19px] pb-[19px] pt-6 relative"
   >
+    <InfiniteLabels />
+
     <SwapLanguage class="mt-1 ml-[5px]" />
 
     <AppLogo class="absolute top-0 left-1/2 transform -translate-x-1/2 mt-6" />
@@ -34,6 +36,7 @@ import SwapLanguage from "@/components/SwapLanguage.vue";
 import AppLogo from "@/components/AppLogo.vue";
 import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
+import InfiniteLabels from "@/components/InfiniteLabels.vue";
 export default {
   name: "HomeView",
   components: {
@@ -41,6 +44,7 @@ export default {
     AppLogo,
     AppHeading,
     AppLink,
+    InfiniteLabels,
   },
 };
 </script>
