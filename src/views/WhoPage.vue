@@ -1,8 +1,8 @@
 <template>
   <div
-    class="bg-white w-full h-screen flex flex-col justify-center items-center font-mono"
+    class="bg-white w-full h-screen flex flex-col justify-center items-center font-mono px-8 text-center"
   >
-    <h1 class="text-6xl text-gray-800">You're cute 🙃</h1>
+    <h1 class="text-3xl md:text-6xl text-gray-800 mb-2">You're cute 🙃</h1>
     <span class="text-lg"
       >now
       <router-link

@@ -1,7 +1,26 @@
+// spin anim
+.spin-anim {
+  animation: spin-backwards 2s linear infinite;
+  animation-play-state: paused;
+
+  &:hover {
+    animation-play-state: running;
+  }
+}
+
+@keyframes spin-backwards {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
 // language popup animation
 .slide-fade-enter-active,
 .slide-fade-leave-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .slide-fade-enter-from,
 .slide-fade-leave-to {
@@ -18,8 +37,8 @@
 
 .language-trigger {
   &:hover ~ .language {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
